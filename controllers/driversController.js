@@ -37,7 +37,7 @@ exports.loginDriver = (req, res) => {
       if (err) return res.status(500).json({ error: err });
 
       if (results.length > 0) {
-        res.json({
+        res.status(200).json({
           success: true,
           message: 'Login bem-sucedido',
           driver: results[0]
